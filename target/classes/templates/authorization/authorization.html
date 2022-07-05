@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>authorization</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/authorization/authentication}" th:object="${userModel}">
+    <label for="name"> Enter username: </label>
+    <input type="text" th:field="*{name}" id="name">
+    <br><label for="password"> Enter password: </label>
+    <input type="password" th:field="*{password}" id="password">
+    <br><input type="submit" value="Enter">
+</form>
+    <button onclick="window.location.href = '/authorization/resetPassword';">Reset password</button>
+    <button onclick="window.location.href = '/authorization/registration';">Registration</button>
+</body>
+</html>
