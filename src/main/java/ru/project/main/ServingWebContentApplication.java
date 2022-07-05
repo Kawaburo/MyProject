@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import ru.project.main.utils.db.SettingsConnectDatabase;
+import ru.project.main.utils.db.SettingsDataBase.SettingsConnectDatabase;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class ServingWebContentApplication {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl(HashMapSettingConnectDataBase.get("url"));
-        dataSource.setUsername(HashMapSettingConnectDataBase.get("username"));
+        dataSource.setUsername(HashMapSettingConnectDataBase.get("userName"));
         dataSource.setPassword(HashMapSettingConnectDataBase.get("password"));
         return dataSource;
     }

@@ -1,4 +1,4 @@
-package ru.project.main.utils.db;
+package ru.project.main.utils.db.SettingsDataBase;
 
 import java.io.*;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ public class SettingsConnectDatabase {
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         //3
         getSetConnectDBList.put("url",bufferedReader.readLine());
-        getSetConnectDBList.put("nameUser",bufferedReader.readLine());
+        getSetConnectDBList.put("userName",bufferedReader.readLine());
         getSetConnectDBList.put("password",bufferedReader.readLine());
         //4
         return getSetConnectDBList;

@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ru.project.main.authorization.UserDAO;
-import ru.project.main.authorization.UserModel;
 
 import javax.validation.Valid;
 
@@ -48,9 +46,11 @@ public class AuthorizationController {
 
     @PostMapping("/authentication")
     public String authentication(@ModelAttribute("userModel") UserModel userModel){
-        boolean tryAuthentication = userDAO.tryAuthentication(userModel.getName(),userModel.getPassword());
-        if (tryAuthentication)
-            System.out.println("ok");
+        System.out.println(userModel.getName());
+        System.out.println(userModel.getPassword());
+      //  boolean tryAuthentication = userDAO.tryAuthentication(userModel.getName(),userModel.getPassword());
+      //  if (tryAuthentication)
+       //     System.out.println("ok");
         return "redirect:/authorization";
     }
 }

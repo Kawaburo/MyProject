@@ -1,6 +1,6 @@
 package reader;
 
-import ru.project.main.utils.db.SettingsConnectDatabase;
+import ru.project.main.utils.db.SettingsDataBase.SettingsConnectDatabase;
 
 import java.io.*;
 import java.util.HashMap;
