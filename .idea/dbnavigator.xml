@@ -29,7 +29,32 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="aca21b60-6a21-4651-9336-98cb81a3beea">
-      <console name="Connection" type="STANDARD" schema="public" session="Main" />
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[insert into counters(
+pool_1,
+pool_2,
+pool_3,
+pool_4,
+pool_5,
+pool_6,
+pool_7,
+pool_8,
+pool_9,
+pool_10,
+pool_11,
+pool_12,
+pool_13,
+boilerRoom,
+kpp,
+ahzDown,
+ahzUp,
+mainHouseLeft,
+mainHouseRight,
+guestHouse,
+workerHotel,
+mainWaterInput,
+gas)
+
+values(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23);]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

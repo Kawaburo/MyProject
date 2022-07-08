@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Таблица счетчиков</caption>
+        <tr><th>Data</th>
+            <th>Poll_1</th>
+            <th>Poll_2</th>
+            <th>Poll_3</th>
+            <th>Poll_4</th>
+            <th>Poll_5</th>
+            <th>Poll_6</th>
+            <th>Poll_7</th>
+            <th>Poll_8</th>
+            <th>Poll_9</th>
+            <th>Poll_10</th>
+            <th>Poll_11</th>
+            <th>Poll_12</th>
+            <th>Poll_13</th>
+            <th>boilerRoom</th>
+            <th>KPP</th>
+            <th>ahzDown</th>
+            <th>ahzUp</th>
+            <th>mainHouseLeft</th>
+            <th>mainHouseRight</th>
+            <th>guestHouse</th>
+            <th>workerHotel</th>
+            <th>mainWaterInput</th>
+            <th>gas</th>
+        </tr>
+        <tr th:each="counters : ${counters}">
+                <th th:text="${counters.getData()}">value</th>
+                <th th:text="${counters.getPool_1()}">value</th>
+                <th th:text="${counters.getPool_2()}">value</th>
+                <th th:text="${counters.getPool_3()}">value</th>
+                <th th:text="${counters.getPool_4()}">value</th>
+                <th th:text="${counters.getPool_5()}">value</th>
+                <th th:text="${counters.getPool_6()}">value</th>
+                <th th:text="${counters.getPool_7()}">value</th>
+                <th th:text="${counters.getPool_8()}">value</th>
+                <th th:text="${counters.getPool_9()}">value</th>
+                <th th:text="${counters.getPool_10()}">value</th>
+                <th th:text="${counters.getPool_11()}">value</th>
+                <th th:text="${counters.getPool_12()}">value</th>
+                <th th:text="${counters.getPool_13()}">value</th>
+                <th th:text="${counters.getBoilerRoom()}">value</th>
+                <th th:text="${counters.getKpp()}">value</th>
+                <th th:text="${counters.getAhzDown()}">value</th>
+                <th th:text="${counters.getAhzUp()}">value</th>
+                <th th:text="${counters.getMainHouseLeft()}">value</th>
+                <th th:text="${counters.getMainHouseRight()}">value</th>
+                <th th:text="${counters.getGuestHouse()}">value</th>
+                <th th:text="${counters.getWorkerHotel()}">value</th>
+                <th th:text="${counters.getMainWaterInput()}">value</th>
+                <th th:text="${counters.getGas()}">value</th>
+        </tr>
+    </table>
+</body>
+</html>

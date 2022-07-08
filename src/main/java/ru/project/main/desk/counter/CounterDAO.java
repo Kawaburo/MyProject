@@ -1,8 +1,16 @@
 package ru.project.main.desk.counter;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+/*
+    автоматическое
+ */
+@Component
 public class CounterDAO {
 
     private JdbcTemplate jdbcTemplate;
@@ -20,5 +28,9 @@ public class CounterDAO {
                         "guestHouse,workerHotel,mainWaterInput,gas)" +
                         " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
                 counterModel.getAhzDown());
+    }
+    //Read list counter
+    public List<CounterModel> getListCounterDAO(){
+        return jdbcTemplate.query("select * from counters;", new BeanPropertyRowMapper<>(CounterModel.class));
     }
 }

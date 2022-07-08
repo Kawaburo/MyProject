@@ -2,6 +2,9 @@ package ru.project.main.desk.counter;
 
 import java.time.LocalDate;
 
+/*
+    Need create Valid
+ */
 public class CounterModel {
 
     private final String data = String.valueOf(LocalDate.now());
@@ -32,6 +35,8 @@ public class CounterModel {
     public String getData() {
         return data;
     }
+
+
 
     public Integer getPool_1() {
         return pool_1;
