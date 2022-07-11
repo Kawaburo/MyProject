@@ -27,8 +27,14 @@ public class CounterDAO {
                         ",pool_11,pool_12,pool_13,boilerRoom,kpp,ahzDown,ahzUp,mainHouseLeft,mainHouseRight," +
                         "guestHouse,workerHotel,mainWaterInput,gas)" +
                         " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
-                counterModel.getAhzDown());
+                counterModel.getData(),counterModel.getPool_1(),counterModel.getPool_2(),counterModel.getPool_3(),
+                counterModel.getPool_4(),counterModel.getPool_5(),counterModel.getPool_6(),counterModel.getPool_7(),
+                counterModel.getPool_8(),counterModel.getPool_9(),counterModel.getPool_10(),counterModel.getPool_11(),
+                counterModel.getPool_12(),counterModel.getPool_13(),counterModel.getBoilerRoom(),counterModel.getKpp(),
+                counterModel.getAhzDown(),counterModel.getAhzUp(),counterModel.getMainHouseLeft(),counterModel.getMainHouseRight(),
+                counterModel.getGuestHouse(),counterModel.getWorkerHotel(),counterModel.getMainWaterInput(),counterModel.getGas());
     }
+
     //Read list counter
     public List<CounterModel> getListCounterDAO(){
         return jdbcTemplate.query("select * from counters;", new BeanPropertyRowMapper<>(CounterModel.class));

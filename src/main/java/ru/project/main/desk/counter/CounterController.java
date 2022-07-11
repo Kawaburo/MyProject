@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -19,6 +20,10 @@ public class CounterController {
     @GetMapping()
     public String getListCounter(Model model){
         model.addAttribute("counters",counterDAO.getListCounterDAO());
+        return "viewDesk/counter/viewCounter";
+    }
+    @PostMapping()
+    public String addCounter(){
         return "viewDesk/counter/viewCounter";
     }
 }

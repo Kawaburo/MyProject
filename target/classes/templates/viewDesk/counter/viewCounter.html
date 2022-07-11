@@ -5,9 +5,10 @@
     <title>Counter</title>
 </head>
 <body>
+<form th:method="POST" th:action="@{/counters}" th:object="${counterModel}">
     <table border="1">
-        <caption>Таблица счетчиков</caption>
-        <tr><th>Data</th>
+        <caption>Counter</caption>
+        <tr><th size="5">Data</th>
             <th>Poll_1</th>
             <th>Poll_2</th>
             <th>Poll_3</th>
@@ -33,31 +34,59 @@
             <th>gas</th>
         </tr>
         <tr th:each="counters : ${counters}">
-                <th th:text="${counters.getData()}">value</th>
-                <th th:text="${counters.getPool_1()}">value</th>
-                <th th:text="${counters.getPool_2()}">value</th>
-                <th th:text="${counters.getPool_3()}">value</th>
-                <th th:text="${counters.getPool_4()}">value</th>
-                <th th:text="${counters.getPool_5()}">value</th>
-                <th th:text="${counters.getPool_6()}">value</th>
-                <th th:text="${counters.getPool_7()}">value</th>
-                <th th:text="${counters.getPool_8()}">value</th>
-                <th th:text="${counters.getPool_9()}">value</th>
-                <th th:text="${counters.getPool_10()}">value</th>
-                <th th:text="${counters.getPool_11()}">value</th>
-                <th th:text="${counters.getPool_12()}">value</th>
-                <th th:text="${counters.getPool_13()}">value</th>
-                <th th:text="${counters.getBoilerRoom()}">value</th>
-                <th th:text="${counters.getKpp()}">value</th>
-                <th th:text="${counters.getAhzDown()}">value</th>
-                <th th:text="${counters.getAhzUp()}">value</th>
-                <th th:text="${counters.getMainHouseLeft()}">value</th>
-                <th th:text="${counters.getMainHouseRight()}">value</th>
-                <th th:text="${counters.getGuestHouse()}">value</th>
-                <th th:text="${counters.getWorkerHotel()}">value</th>
-                <th th:text="${counters.getMainWaterInput()}">value</th>
-                <th th:text="${counters.getGas()}">value</th>
+            <th th:text="${counters.getData()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_1()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_2()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_3()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_4()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_5()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_6()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_7()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_8()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_9()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_10()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_11()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_12()}">value</th>
+            <th style="color:blue" th:text="${counters.getPool_13()}">value</th>
+            <th style="color:blue" th:text="${counters.getBoilerRoom()}">value</th>
+            <th style="color:blue" th:text="${counters.getKpp()}">value</th>
+            <th style="color:blue" th:text="${counters.getAhzDown()}">value</th>
+            <th style="color:blue" th:text="${counters.getAhzUp()}">value</th>
+            <th style="color:blue" th:text="${counters.getMainHouseLeft()}">value</th>
+            <th style="color:blue" th:text="${counters.getMainHouseRight()}">value</th>
+            <th style="color:blue" th:text="${counters.getGuestHouse()}">value</th>
+            <th style="color:blue" th:text="${counters.getWorkerHotel()}">value</th>
+            <th style="color:blue" th:text="${counters.getMainWaterInput()}">value</th>
+            <th style="color:blue" th:text="${counters.getGas()}">value</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
+            <th><input type="text" size="5"></th>
         </tr>
     </table>
+    <input type="submit" value="Create">
+</form>
 </body>
 </html>

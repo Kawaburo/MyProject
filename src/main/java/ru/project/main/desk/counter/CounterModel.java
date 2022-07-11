@@ -7,7 +7,7 @@ import java.time.LocalDate;
  */
 public class CounterModel {
 
-    private final String data = String.valueOf(LocalDate.now());
+    private String data ;//= String.valueOf(LocalDate.now());
     private Integer pool_1;
     private Integer pool_2;
     private Integer pool_3;
@@ -36,7 +36,9 @@ public class CounterModel {
         return data;
     }
 
-
+    public void setData(String data) {
+        this.data = data;
+    }
 
     public Integer getPool_1() {
         return pool_1;

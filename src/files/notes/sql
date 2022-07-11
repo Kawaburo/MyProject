@@ -1,3 +1,4 @@
 
 CREATE TABLE tableName (date date,name varchar);
 INSERT INTO tableName (columnTable1,columnTable1) VALUES(val1,val2);
+ALTER TABLE counters ALTER COLUMN date SET DEFAULT CURRENT_DATE;
